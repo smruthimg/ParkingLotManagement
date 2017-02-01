@@ -43,7 +43,10 @@ public class Vehicle {
     private Permit permit;
     private ArrayList<Ticket> tickets=new ArrayList<Ticket>();
 
-
+    /**
+     * Constructor for Class Vehicle
+     * @param plate integer to store plate number of vehicle
+     */
     public Vehicle(int plate){
         this.plate=plate;
 
