@@ -1,0 +1,11 @@
+commit f9007f058bbcf26ea623a4557bfa036dda8ade29
+Author: smruthimg <sg1626@rit.edu>
+Date:   Wed Feb 1 14:31:14 2017 -0500
+
+    Started commenting
+
+commit 1b5de9ea0eb1b5575d6da847cd54ce6fd016d890
+Author: smruthimg <sg1626@rit.edu>
+Date:   Wed Feb 1 14:26:32 2017 -0500
+
+    In Lab implementation for Vehicle class
