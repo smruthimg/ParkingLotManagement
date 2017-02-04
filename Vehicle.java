@@ -41,7 +41,7 @@ public class Vehicle {
     private int plate;
     private boolean parked;
     private Permit permit;
-    private ArrayList<Ticket> tickets=new ArrayList<Ticket>();
+    private ArrayList<Ticket> tickets;
 
     /**
      * Constructor for Class Vehicle
@@ -49,6 +49,9 @@ public class Vehicle {
      */
     public Vehicle(int plate){
         this.plate=plate;
+        this.parked=false;
+        this.permit=null;
+        this.tickets=new ArrayList<Ticket>();
 
     }
 
