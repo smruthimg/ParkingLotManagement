@@ -1,3 +1,15 @@
+commit 078cf79e90d518b6a42996f616679061b86bca73
+Author: smruthimg <sg1626@rit.edu>
+Date:   Fri Feb 3 22:42:27 2017 -0500
+
+    Added Parking Officer Class and methods for other classes
+
+commit bc769c850fede90703635b74c42a19cc2a61713a
+Author: smruthimg <sg1626@rit.edu>
+Date:   Thu Feb 2 16:18:02 2017 -0500
+
+    Added 2 more classes ParkingSpot and ParkingLot
+
 commit f9007f058bbcf26ea623a4557bfa036dda8ade29
 Author: smruthimg <sg1626@rit.edu>
 Date:   Wed Feb 1 14:31:14 2017 -0500

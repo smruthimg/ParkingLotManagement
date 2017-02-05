@@ -24,19 +24,19 @@ public class ParkingLot {
     }
 
     private void initializeSpots(){
-        for(int i=1;i<=handicappedSpots;i++){
+        for(int i=0;i<handicappedSpots;i++){
             ParkingSpot p=new ParkingSpot(i, Permit.Type.HANDICAPPED);
 //            System.out.println(lot.size());
             lot.add(p);
 
         }
-        for(int i=1;i<=reservedSpots;i++){
-            ParkingSpot p=new ParkingSpot(1+lot.size(), Permit.Type.RESERVED);
+        for(int i=0;i<reservedSpots;i++){
+            ParkingSpot p=new ParkingSpot(lot.size(), Permit.Type.RESERVED);
 //            System.out.println(lot.size());
             lot.add(p);
         }
-        for(int i=1;i<=generalSpots;i++){
-            ParkingSpot p=new ParkingSpot(1+lot.size(), Permit.Type.GENERAL);
+        for(int i=0;i<generalSpots;i++){
+            ParkingSpot p=new ParkingSpot(lot.size(), Permit.Type.GENERAL);
 //            System.out.println(lot.size());
             lot.add(p);
         }
@@ -61,6 +61,14 @@ public class ParkingLot {
         return false ;
     }
 
+    public ParkingSpot getSpot(int spot){
+        if(spot>ILLEGAL_SPOT && spot<=capacity ){
+            return lot.get(spot);
+        }
+        return null;
+
+    }
+
     public boolean isSpotValid(int spot){
         return(spot>ILLEGAL_SPOT && spot<=capacity );
     }
@@ -77,7 +85,7 @@ public class ParkingLot {
     }
     public int removeVehicle(Vehicle vehicle){
         if(vehicle!=null){
-            for(int i=0;i<=getCapacity();i++){
+            for(int i=0;i<getCapacity();i++){
                 if (lot.get(i).getVehicle()==vehicle){
                     lot.get(i).vacateSpot();
                     parkedVehicles--;
@@ -100,7 +108,8 @@ public class ParkingLot {
             if (lot.get(i).getVehicle()==null){
                 vacantSpots++;
             }
-            if(i%SPOTS_PER_LINE==9) {
+            if(i%SPOTS_PER_LINE
+                    ==9) {
                 str += "\n";
 
             }
