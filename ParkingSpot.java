@@ -1,7 +1,8 @@
 //import com.sun.java.util.jar.pack.Instruction;
 
 /**
- * Created by smrut on 2/2/2017.
+ * Represents the Parkking spot in the paking simulator
+ * Created by Smruthi Gadenkanahalli on 2/2/2017.
  */
 public class ParkingSpot {
     private static final String OCCUPIED_STR="*";// type is * if the spot is occupied
@@ -9,18 +10,37 @@ public class ParkingSpot {
     private Permit.Type type;
     private Vehicle vehicle;
 
+    /**
+     * Parking spot constructor to assign values to member fields
+     * @param spot integer to store the spot number
+     * @param type Permit type field tostore the permit type
+     */
     public ParkingSpot(int spot,Permit.Type type){
         this.spot=spot;
         this.type=type;
     }
 
+    /**
+     * method to fetch the spot number
+     * @return integer value of the spot
+     */
     public int getSpot(){
         return spot;
     }
+
+    /**
+     * method to get the permit type of the spot
+     * @return permit type value
+     */
     public Permit.Type getType(){
 
         return type;
     }
+
+    /**
+     *
+     * @return
+     */
     public Vehicle getVehicle(){
         return vehicle;
 
@@ -62,21 +82,13 @@ public class ParkingSpot {
         System.out.println( spotVar+ "is correct spot? " + (spot == s.getSpot() ? "OK" : ("Fail! Got:" + s.getSpot() + ", Expected" + spot)));
 
         System.out.println(spotVar+" is correct type? " + (s.getType() == type ? "OK" : "FAIL! Got: " + s.getType() + ",  Expected: " + type));
-//        System.out.println(" is the vehicle null?");
-//        if(vehicle==null && s.getVehicle()==null) {
-//            System.out.println("FAIL! Got: "+s.getVehicle()+",Expected: " + vehicle);
-//
-//        }
-//        else{
-//            System.out.println("OK");
-//        }
-//        System.out.println(" is the vehicle correct?");
+
         System.out.println( "is the vehicle null?  ");
         if (s.getVehicle()!=null && vehicle!=null){
             System.out.println("Not Null");
             System.out.println( "is the vehicle correct?  ");
           if(vehicle.equals(s.getVehicle())){
-              System.out.println("OK");
+              System.out.println("OK. Vehicle is correct");
           }
           else{
               System.out.println("FAIL! Got: "+s.getVehicle()+",Expected: " + vehicle);

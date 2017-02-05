@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 /**
- * Created by smrut on 2/3/2017.
+ * Represent the Parking office in the parking simulation
+ * Created by Smruthi Gadenkanahalli on 2/3/2017.
  */
 public class ParkingOfficer {
     private ParkingLot lot;

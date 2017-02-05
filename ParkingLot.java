@@ -2,7 +2,8 @@ import javax.sound.sampled.EnumControl;
 import java.util.ArrayList;
 
 /**
- * Created by smrut on 2/2/2017.
+ * Represents the Parking llot in the parking simulation
+ * Created by Smruthi Gadenkanahalli on 2/2/2017.
  */
 public class ParkingLot {
     private int capacity;
@@ -120,6 +121,7 @@ public class ParkingLot {
     }
 
     public static void main(String[] args) {
+        System.out.println("Creating parkinglot P1");
         ParkingLot P1=new ParkingLot(10,10,10);
         Vehicle v1=new Vehicle(001);
         P1.parkVehicle(v1,1);
